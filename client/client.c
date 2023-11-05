@@ -36,6 +36,7 @@ void *send_messages(void *arg)
   while (1)
   {
     // Get message from user
+
     fgets(buffer, MAX_MESSAGE_LEN, stdin);
     buffer[strcspn(buffer, "\n")] = '\0'; // remove trailing newline
 

@@ -38,7 +38,7 @@ void *send_messages(void *arg)
     // Get message from user
 
     fgets(buffer, MAX_MESSAGE_LEN, stdin);
-    buffer[strcspn(buffer, "\n")] = '\0'; // remove trailing newline
+    buffer[strcspn(buffer, "\n")] = '\0'; 
 
     // Send message to server
     int n = send(sockfd, buffer, strlen(buffer), 0);
@@ -100,7 +100,7 @@ void chat_loop(int sockfd, char *username)
     // Get message from user
     bzero(buffer, MAX_MESSAGE_LEN);
     fgets(buffer, MAX_MESSAGE_LEN, stdin);
-    buffer[strcspn(buffer, "\n")] = '\0'; // remove trailing newline
+    buffer[strcspn(buffer, "\n")] = '\0'; 
 
     // Send message to server
     n = send(sockfd, buffer, strlen(buffer), 0);
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
   // Get username from user
   printf("Enter username: ");
   fgets(username, MAX_USERNAME_LEN, stdin);
-  username[strcspn(username, "\n")] = '\0'; // remove trailing newline
+  username[strcspn(username, "\n")] = '\0'; 
 
   // Create socket
   sockfd = socket(AF_INET, SOCK_STREAM, 0);

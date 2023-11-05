@@ -22,7 +22,7 @@ int num_clients = 0;
 
 int main(int argc, char *argv[])
 {
-  // Check for correct number of command-line arguments
+ 
   if (argc != 2)
   {
     fprintf(stderr, "Usage: %s <port>\n", argv[0]);
